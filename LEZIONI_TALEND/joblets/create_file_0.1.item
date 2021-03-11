@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties" xmlns:model="http://www.talend.com/joblet.ecore" xmi:version="2.0">
   <model:JobletProcess defaultContext="Default" jobType="Standard">
-    <context confirmationNeeded="false" name="Default"/>
+    <context confirmationNeeded="false" name="Default">
+      <contextParameter comment="" name="fileName" prompt="fileName?" promptNeeded="false" type="id_String" value=""/>
+      <contextParameter comment="" name="tableName" prompt="tableName?" promptNeeded="false" type="id_String" value=""/>
+    </context>
     <parameters>
       <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
       <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
@@ -45,7 +48,7 @@
       <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:tc+CqLnPZGwqQnU+mdK2Vtxv62loZn9vIABOkdBM"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:riyC6qpOG7sH4Ap5vLOig0TbsWddV96nE0XYP76O"/>
       <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -81,28 +84,28 @@
       <routinesParameter id="_AnS74IC2EeuT956_ObHmfA" name="TalendStringUtil"/>
       <routinesParameter id="_AnLnIIC2EeuT956_ObHmfA" name="TalendString"/>
     </parameters>
-    <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="128">
+    <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="128">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-      <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="MYSQL_8"/>
-      <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-      <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
-      <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
-      <elementParameter field="TEXT" name="PORT" show="false" value="&quot;3306&quot;"/>
-      <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+      <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+      <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tDBConnection_1"/>
+      <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
+      <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
+      <elementParameter field="TEXT" name="DBNAME" value="&quot;test&quot;"/>
       <elementParameter field="TEXT" name="TYPE" show="false" value="MySQL"/>
-      <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:RFiCjQwoOtaBWtdg5c5LDNviZiZvmixdTq2S8uQl"/>
-      <elementParameter field="DBTABLE" name="TABLE" value="((String)globalMap.get(&quot;tDBTableList_1_CURRENT_TABLE&quot;))"/>
+      <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
+      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:YhJZZHPTUw6bJHkxfgMKPRX18eMk41RyoZsC7KD9"/>
+      <elementParameter field="DBTABLE" name="TABLE" value="context.tableName"/>
       <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
       <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-      <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT *&#10;FROM &quot; + ((String)globalMap.get(&quot;tDBTableList_1_CURRENT_TABLE&quot;))"/>
-      <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
-      <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
+      <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT *&#10;FROM &quot; +context.tableName"/>
+      <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+      <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
       <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
       <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="mysql_id"/>
-      <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;noDatetimeStringSync=true&quot;"/>
+      <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
       <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
       <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
       <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
@@ -118,7 +121,7 @@
         <additionalProperties key="Comment" value=""/>
       </metadata>
     </node>
-    <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="128">
+    <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="128">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
       <elementParameter field="CHECK" name="USESTREAM" value="false"/>
       <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
@@ -153,9 +156,9 @@
         <additionalProperties key="Comment" value=""/>
       </metadata>
     </node>
-    <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="128">
+    <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="128">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
-      <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;Dump tabella &quot; + (String)globalMap.get(&quot;tDBTableList_1_CURRENT_TABLE&quot;) + &quot; completato&quot;);"/>
+      <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;Dump tabella &quot; + context.tableName + &quot; completato&quot;);"/>
       <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="tJava_1"/>
@@ -196,13 +199,13 @@
     </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3686860e-361e-4fef-9f21-1697a6f01932"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rZbNS4sVfqEbiFdCQ8RAdW4sLBBwevURe44ycaH11LBM7phQsxmgZwchx++0oyMKZ4Vj9yKwy866&#13;
-1Hy37JrMAA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6366a85e-6c11-44e0-a912-010265f6d3a2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>P55eitfHWVHwuOHG9XVWIXC9ZcSsHBGlu3hHfJcrWwIIvGwX0f1XeN4/z5VBOdJuX2rQrkKBHwLm&#13;
-qJ/sLpHxAA==</DigestValue></Reference></SignedInfo><SignatureValue>R/obnWLkWp0USkWFhOdvxLZFtTmuyxcrywUCjwEAIELEgysf2tuOvwBpzvF/WXFW4Z+GoIk9NKwd&#13;
-yyUkOr33b2zEATucjpaV3Ly8b8CAxWYvhMyrWJGseVsPxeJOSzRa4N9BQRoBds51y/aGBq+a53bM&#13;
-Czs69CCqlCd0fanQgGXfJeyldglyLqFmkpuWTuQ6JZR60wS8WVIW0+Q/SvS0QgfeT9i9IpIiMKlT&#13;
-XOSUl2A2jfFZGLCRh65UTMurJEYsCXxCljg7D7BBdjAX/Bw4/3IDT6NybPYCoz46BuRI3Uq/Os/E&#13;
-n2xSJZzDXvQfpb+7YFypAYH4rqFjRsCvTXZy4A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7d0449ab-b5fb-4003-8fa9-be5851541bee"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/wczZlr+25zeMC32hDcgPe47fXR0Ku6Lb934gz8B4iRj0zW0WnfdEGPx8SpbZ5ObPQrdicGcOvZc&#13;
+cTFwn7eZQg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b130f999-9892-4115-935f-aa9d098113b4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SUseOuiXWIhRWcOr0mzfp85jtOlwtTdgKkcskl8/oaQX6iZYUJMy3Xb19JyVrTtIhzr2sgvozmYA&#13;
+vC1NLpc/uQ==</DigestValue></Reference></SignedInfo><SignatureValue>NvAn9m+SLLyJHfewVHz284RoILs1G1LgQsDbsqBiIc5HX0IhyxQ1Bk2G/cj9HhgbavdLjs/KjRsB&#13;
+RG3nCIFLgGdSs0xBIPnLcZqqv71it0KqQoaZTK62ltHC8mIFlOtq+fzgr7USzFfio6B4gGE95qhm&#13;
+3UYu1nmEteIWXg7WPSAeMZj+UtDXZ9mRdggjuBpsC4JOmbUE9TrLnuVWUWNzjCVoZjtp/cvH3HjB&#13;
+NmC0CKDgex66KDSOd1cxCKcJfE3VZkT3NhJY+Tjp7HK1qVgzO6z1TH7zbbUpEGnIUS5iJAQYyNiU&#13;
+wicwegkulWqhA7ZQVAHxjhXZVF4Nw3IMm5xeVw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -224,4 +227,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6366a85e-6c11-44e0-a912-010265f6d3a2" Target="#_3686860e-361e-4fef-9f21-1697a6f01932"><Timestamp>2021-03-11 10:55:29</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b130f999-9892-4115-935f-aa9d098113b4" Target="#_7d0449ab-b5fb-4003-8fa9-be5851541bee"><Timestamp>2021-03-11 10:58:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
