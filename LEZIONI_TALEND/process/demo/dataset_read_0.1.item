@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -40,7 +42,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:NwB9AanvsghJUt0+oXAZzniVQuPsMUFpC1tSpMRE"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:XHd5+Kei4l6wAyJYeemMWZ7hhvuZ//y9RRQ7YMwG"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -75,7 +77,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value=""/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:f9UctUVEviek/5QOtsiLndkEMZzvJIfm1yyhkRhb"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:3uPnSYL0ZCuGMzMybN8J8bSz/Cayn2tyun/FbvMc"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;log_statcatcher&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;log_logcatcher&quot;"/>
@@ -110,13 +112,125 @@
     <routinesParameter id="_AnS74IC2EeuT956_ObHmfA" name="TalendStringUtil"/>
     <routinesParameter id="_AnLnIIC2EeuT956_ObHmfA" name="TalendString"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_afebb086-fc87-4d83-b195-3b492107f062"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/RozbcW0mzCb3H7SpNyCSnm3SplNcFP9AB7knis10Ohkd/gGxbacrRHl2IAbNDfpnTwH5O+jpVlA&#13;
-HxEpyJByBQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7d543cc2-3542-4e10-b0f4-1e59acb339df"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>yuMtV6VhoKDNsuBi/AaUmlDSm6gxWD6ijbvufmOfsXFFfBDjIOE8z99oqRDNXjrb2KzQx0kQHaiP&#13;
-PkE2sLZG5g==</DigestValue></Reference></SignedInfo><SignatureValue>J6cCn4KkRkRfxuYF7yPMRXR7d1kJoZRuTIvCXgt2tkTahhlS7AwyZiQz9bS1q9T8jPlvlf6XTAGw&#13;
-XbQu/4/Jl60UWLYV84gHFl37iGZaoc6RpX/yfMcFcbf9Iryv8btumU3QogzQW11lKhPhj2OvixsF&#13;
-tHnG2ZaB2hwyuKRJRbpWrsE8v6j9/+A5uBzMkmqdSqIXw0z1XSChha35ZMKvorZjoRfR3EM3ck9P&#13;
-RKqa0v9ypNl3ys3WNxvm7rXdim2leDPP+A62ab0IJHfVNFZoqKXv2+KOc0l9kP0nxT2QLcCiK7ni&#13;
-TkNQEGNXRnGKxKByy3J6hr9RbAgnrLjoudN89A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <node componentName="tDatasetInput" componentVersion="0.28.2" offsetLabelX="0" offsetLabelY="0" posX="448" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDatasetInput_1"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter name="PROPERTIES" value="{&quot;@type&quot;:&quot;org.talend.components.dataprep.tdatasetinput.TDataSetInputProperties&quot;,&quot;dataSetId&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;\&quot;234c6e61-4010-44eb-98b0-f31531caa4f5\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;dataSetId&quot;,&quot;tags&quot;:null},&quot;dataSetName&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;DESIGN_TIME_ONLY&quot;}]},&quot;storedValue&quot;:&quot;\&quot;customer_order_20210503_1901\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;dataSetName&quot;,&quot;tags&quot;:null},&quot;schema&quot;:{&quot;schema&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.SchemaProperty&quot;,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;{\&quot;type\&quot;:\&quot;record\&quot;,\&quot;name\&quot;:\&quot;Null\&quot;,\&quot;fields\&quot;:[{\&quot;name\&quot;:\&quot;OrderNumber\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;name\&quot;:\&quot;OrderTotal\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;name\&quot;:\&quot;CustomerNumber\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;name\&quot;:\&quot;FirstName\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;name\&quot;:\&quot;LastName\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;name\&quot;:\&quot;Street\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;name\&quot;:\&quot;City\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;name\&quot;:\&quot;State\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;name\&quot;:\&quot;Age\&quot;,\&quot;type\&quot;:\&quot;string\&quot;}]}&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:false,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;org.apache.avro.Schema&quot;,&quot;name&quot;:&quot;schema&quot;,&quot;tags&quot;:null},&quot;name&quot;:&quot;schema&quot;,&quot;validationResult&quot;:null,&quot;tags&quot;:null},&quot;mainConnector&quot;:{&quot;propertyPath&quot;:&quot;schema&quot;,&quot;name&quot;:&quot;MAIN&quot;,&quot;tags&quot;:null},&quot;url&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;\&quot;https://tdp.eu.cloud.talend.com\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;url&quot;,&quot;tags&quot;:null},&quot;login&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:null,&quot;storedValue&quot;:&quot;\&quot;walter.spanu@nfr.horsa.it\&quot;&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;login&quot;,&quot;tags&quot;:null},&quot;pass&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.StringProperty&quot;,&quot;possibleValues2&quot;:null,&quot;flags&quot;:{&quot;@type&quot;:&quot;java.util.RegularEnumSet&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;ENCRYPT&quot;},{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.Property$Flags&quot;,&quot;name&quot;:&quot;SUPPRESS_LOGGING&quot;}]},&quot;storedValue&quot;:&quot;enc:system.encryption.key.v1:opft5579dRWhp93i5OD5PY3R3UnIw7cI8iM5Ag7PwPKcNnIuNLjhBX4=&quot;,&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:1,&quot;occurMaxTimes&quot;:1,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:null,&quot;currentType&quot;:&quot;java.lang.String&quot;,&quot;name&quot;:&quot;pass&quot;,&quot;tags&quot;:null},&quot;platform&quot;:{&quot;@type&quot;:&quot;org.talend.daikon.properties.property.EnumProperty&quot;,&quot;flags&quot;:null,&quot;storedValue&quot;:{&quot;@type&quot;:&quot;org.talend.components.dataprep.DataPrepProperties$Platform&quot;,&quot;name&quot;:&quot;DataPrep&quot;},&quot;storedDefaultValue&quot;:null,&quot;children&quot;:{&quot;@type&quot;:&quot;java.util.ArrayList&quot;},&quot;taggedValues&quot;:{&quot;@type&quot;:&quot;java.util.HashMap&quot;,&quot;SUPPORT_CONTEXT&quot;:true,&quot;IS_DYNAMIC&quot;:false,&quot;REPOSITORY_VALUE&quot;:null},&quot;size&quot;:-1,&quot;occurMinTimes&quot;:0,&quot;occurMaxTimes&quot;:0,&quot;precision&quot;:0,&quot;pattern&quot;:null,&quot;nullable&quot;:false,&quot;possibleValues&quot;:{&quot;@type&quot;:&quot;java.util.Arrays$ArrayList&quot;,&quot;@items&quot;:[{&quot;@type&quot;:&quot;org.talend.components.dataprep.DataPrepProperties$Platform&quot;,&quot;name&quot;:&quot;DataCatalog&quot;},{&quot;@type&quot;:&quot;org.talend.components.dataprep.DataPrepProperties$Platform&quot;,&quot;name&quot;:&quot;DataPrep&quot;}]},&quot;currentType&quot;:&quot;org.talend.components.dataprep.DataPrepProperties.Platform&quot;,&quot;name&quot;:&quot;platform&quot;,&quot;tags&quot;:null},&quot;name&quot;:&quot;root&quot;,&quot;validationResult&quot;:{&quot;status&quot;:{&quot;name&quot;:&quot;OK&quot;},&quot;message&quot;:null,&quot;number&quot;:0},&quot;tags&quot;:null}"/>
+    <metadata connector="MAIN" name="MAIN">
+      <column comment="" key="false" length="-1" name="OrderNumber" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="OrderNumber"/>
+      </column>
+      <column comment="" key="false" length="-1" name="OrderTotal" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="OrderTotal"/>
+      </column>
+      <column comment="" key="false" length="-1" name="CustomerNumber" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CustomerNumber"/>
+      </column>
+      <column comment="" key="false" length="-1" name="FirstName" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="FirstName"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LastName" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LastName"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Street" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="Street"/>
+      </column>
+      <column comment="" key="false" length="-1" name="City" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="City"/>
+      </column>
+      <column comment="" key="false" length="-1" name="State" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="State"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Age" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="Age"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="OrderNumber"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OrderTotal"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CustomerNumber"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FirstName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LastName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Street"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="City"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="State"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Age"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="Null" name="tLogRow_1">
+      <column comment="" key="false" length="-1" name="OrderNumber" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="OrderNumber"/>
+      </column>
+      <column comment="" key="false" length="-1" name="OrderTotal" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="OrderTotal"/>
+      </column>
+      <column comment="" key="false" length="-1" name="CustomerNumber" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CustomerNumber"/>
+      </column>
+      <column comment="" key="false" length="-1" name="FirstName" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="FirstName"/>
+      </column>
+      <column comment="" key="false" length="-1" name="LastName" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="LastName"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Street" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="Street"/>
+      </column>
+      <column comment="" key="false" length="-1" name="City" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="City"/>
+      </column>
+      <column comment="" key="false" length="-1" name="State" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="State"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Age" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="Age"/>
+      </column>
+    </metadata>
+  </node>
+  <connection connectorName="MAIN" label="row3" lineStyle="0" metaname="tDatasetInput_1" offsetLabelX="0" offsetLabelY="0" source="tDatasetInput_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDatasetInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_263fa61f-16c3-4160-ac76-2feaa402ebd3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>O0RRMtcJDXQ61C422uibDCWd1k0NUe1LtqGvHhu1ov1Rbo39AK1WAVeJC1UJP03lAWxkcEuE/5JW&#13;
+TGSlL6iBgA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3e08d294-ba71-41b5-842e-b437f81fcbde"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>EHm3edQxSpaGlTtdxe1vFhXkQIg1kl042yVwtHKe2401EperheGukaagNv3a/KTMz9w4dITsYALs&#13;
+aGtS/aDqEA==</DigestValue></Reference></SignedInfo><SignatureValue>Gmt4ptwMIMXj4QoffHEI9AWWbSqj0nEh2JBZYCz/wpU+k5pWci3VyQDag12ztTsjssHOAc6RFtxK&#13;
+05m6iaU3kVzPNKT68bxYz5Ts7OL2s5SyJR2o8eDwSaGAdU8aH8aPmBgFwquZpt+SIeuMsObJeFy1&#13;
+2PICDCQwjDkucoO74yp0KEpzIbjB09ga2TLNr81/cshEwNzc6vLvY432ntOlxYnfEeMtK5114uI4&#13;
+uToEhuRjpjGgHts8drksG6+COaQuSkws0DCemTXuB4XELni66UABhsFUSvkWCkSDF3ZeZkADDFY0&#13;
+qH/Fy8+v8L2xJI201Sslxb2KVPe/z19xNaevKg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -138,4 +252,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7d543cc2-3542-4e10-b0f4-1e59acb339df" Target="#_afebb086-fc87-4d83-b195-3b492107f062"><Timestamp>2021-05-03 17:13:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3e08d294-ba71-41b5-842e-b437f81fcbde" Target="#_263fa61f-16c3-4160-ac76-2feaa402ebd3"><Timestamp>2021-05-03 17:14:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
