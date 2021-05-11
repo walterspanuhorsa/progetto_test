@@ -45,7 +45,7 @@
       <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:DIrv3fYrTo819Q4Hx+eN21spXL+xeY++rcWYEdIL"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:ZPZ5qqk6OkeTgA5a0H/OhDkRg4eaUgaIPJLHnA5l"/>
       <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -95,52 +95,13 @@
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="tJava_1"/>
     </node>
-    <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="256">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-      <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="MYSQL_8"/>
-      <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-      <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
-      <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
-      <elementParameter field="TEXT" name="PORT" show="false" value="&quot;3306&quot;"/>
-      <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
-      <elementParameter field="TEXT" name="TYPE" show="false" value="MySQL"/>
-      <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:7AcRPD8pFtLOKS/On98z8yLRLgjINulx/HIAVemN"/>
-      <elementParameter field="DBTABLE" name="TABLE" value="context.tableName"/>
-      <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-      <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
-      <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-      <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-      <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select count(1) as counter from &quot; + context.tableName"/>
-      <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
-      <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
-      <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-      <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="mysql_id"/>
-      <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
-      <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-      <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
-      <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-      <elementParameter field="TABLE" name="TRIM_COLUMN">
-        <elementValue elementRef="SCHEMA_COLUMN" value="counter"/>
-        <elementValue elementRef="TRIM" value="false"/>
-      </elementParameter>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" name="tDBInput_1">
-        <column comment="" key="false" length="-1" name="counter" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INTEGER" type="id_Integer" usefulColumn="true"/>
-      </metadata>
-    </node>
     <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tDBTableList_1" offsetLabelX="0" offsetLabelY="0" source="tDBTableList_1" target="tJava_1">
       <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
       <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
     </connection>
-    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tDBInput_1">
+    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="TRIGGER_OUTPUT_1">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
-    </connection>
-    <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="OUTPUT_1">
-      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
     </connection>
     <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="TRIGGER_INPUT_1" offsetLabelX="0" offsetLabelY="0" source="TRIGGER_INPUT_1" target="tDBTableList_1">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
@@ -151,28 +112,15 @@
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
     </subjob>
     <subjob>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-    </subjob>
-    <subjob>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="TRIGGER_INPUT_1"/>
       <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
     </subjob>
-    <jobletNodes componentName="OUTPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="992" posY="256">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" value="OUTPUT_1"/>
-      <elementParameter field="CHECK" name="STARTABLE" show="false" value="false"/>
-      <elementParameter field="CHECK" name="START" show="false" value="false"/>
-      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
-      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-      <elementParameter field="MEMO" name="COMMENT" value=""/>
-      <metadata connector="FLOW" name="OUTPUT_1">
-        <column comment="" key="false" length="-1" name="counter" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INTEGER" type="id_Integer" usefulColumn="true"/>
-      </metadata>
-    </jobletNodes>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="TRIGGER_OUTPUT_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
     <jobletNodes componentName="TRIGGER_INPUT" componentVersion="0.1" input="true" offsetLabelX="0" offsetLabelY="0" posX="128" posY="256" trigger="true">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="TRIGGER_INPUT_1"/>
       <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
@@ -182,15 +130,24 @@
       <elementParameter field="CHECK" name="INFORMATION" value="false"/>
       <elementParameter field="MEMO" name="COMMENT" value=""/>
     </jobletNodes>
+    <jobletNodes componentName="TRIGGER_OUTPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="800" posY="256" trigger="true">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="TRIGGER_OUTPUT_1"/>
+      <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+      <elementParameter field="CHECK" name="START" show="false" value="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+    </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8e5841b2-005e-4436-89fa-6a5a345762bb"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Kz2hAkaFyON7w9JmMaKCTu3KWmj8VEAxlZ9DyEu+kYzW/zDpWHPebG1U7uodsXcW1aD6ZGmmDxsC&#13;
-LNinwcGgXQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7baebdc0-4feb-4821-a124-046362f43eac"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FGVmODoNSfTTT2upGS5MObNWPhT82vY/MMQMI65tAPv6k9vtJHwaH9KA+1On4LmNszmcjYGEvttP&#13;
-tSyvbw3gcA==</DigestValue></Reference></SignedInfo><SignatureValue>WnQkP8AM+gqOPZl93AR4u3rXzc+6TBhTF7Ja9wsFf03e5t7gyILcEDi/3khgy+wdcDaNfiu3TPZt&#13;
-rsb9Rszm0FfTnlZWs3KDAR12QQ1y2DDxl73kwhNKGL3ZrXaSRahc8WeQMBKJ4/v65qGss7xGgWlg&#13;
-eByBfp02KayP3meyMG8L0uwrGILZsbPmF9Cg22pbzytpX0ePVRQJo9T2A8F1bh49tEckffp/HWWw&#13;
-YfsLY8v6+rYfJDEQ5DFySKm89Xx/94XLJQEyAId9g+Xpecccef6fqLhERUffu/OaHDr3LkC9s1R0&#13;
-/GP8HeJmI8hm90QiZIHX867mG9cvuqrWxsF04g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2ebad37c-ab6a-40cf-a99d-57000de36011"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5cpdgTNigQCKT5HPOsJOtGsJxA36ZSR6dqgkaBrH2CT9V9dgbX8C1TNmlugC5qz52kBmqHEPwxed&#13;
+EQsJIb6gvQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a1d7ec02-974d-4964-b04a-b068362f5e4e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YpaHcg9iGNZH5HKHLmlWL/ZAfd5Q1NyiMXsPgQm128+6zyCdxRpzWhB+d/usTAkdolMP7Uw5K2Es&#13;
+c5f9tk0JrA==</DigestValue></Reference></SignedInfo><SignatureValue>UYz7kYUJqIXxQq/2x22mYk316lHe9/o3VdgguwXptgclzg/bt20DDJ/WQM8lpK2VYH3dvoxJ4RNs&#13;
+vn6Fv5VQjdI34XTbUeCVBuwyjnJWBVDrKgjLucZbiaWGSOrZa4xVnqd8b534GXXUmLioBHylHw/w&#13;
+L9hjifv5HurdgebzrVvss0nVRU2CqjtwA8BW/28lWPfwvBX2GhbzyXXzPTj3yKjQSzg7gyrB7rV3&#13;
+oRj79FA+agfjV++dg/EeuhUmIZ42yY7n3sPlkP804+90lXkslcFN7TTt+chOQNaZC1j2NZfWZ8VA&#13;
+UcdChjsUPa6yKxGb2lAm5Jkd0D4kLhbkcdjcJQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -212,4 +169,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7baebdc0-4feb-4821-a124-046362f43eac" Target="#_8e5841b2-005e-4436-89fa-6a5a345762bb"><Timestamp>2021-05-11 11:12:11</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a1d7ec02-974d-4964-b04a-b068362f5e4e" Target="#_2ebad37c-ab6a-40cf-a99d-57000de36011"><Timestamp>2021-05-11 11:28:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
