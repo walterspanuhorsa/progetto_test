@@ -133,14 +133,21 @@
       <version>6.0.0</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>talendcsv</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
       <groupId>org.example.lezioni_talend.code</groupId>
       <artifactId>routines</artifactId>
       <version>7.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.lezioni_talend.joblet</groupId>
+      <artifactId>dump_files</artifactId>
+      <version>0.1.0</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.example.lezioni_talend.joblet</groupId>
+      <artifactId>get_tables</artifactId>
+      <version>0.1.0</version>
+      <type>pom</type>
     </dependency>
   </dependencies>
   <build>
