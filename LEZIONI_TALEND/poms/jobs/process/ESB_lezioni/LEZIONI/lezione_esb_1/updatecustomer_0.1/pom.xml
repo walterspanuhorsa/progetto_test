@@ -11,46 +11,35 @@
   <groupId>org.example.lezioni_talend.job</groupId>
   <artifactId>updateCustomer</artifactId>
   <version>0.1.0</version>
-  <packaging>bundle</packaging>
-  <name>LEZIONI_TALEND updateCustomer-${project.version} (0.1,Job Designs) Bundle</name>
+  <name>LEZIONI_TALEND updateCustomer-0.1.0 (0.1,Job Designs)</name>
   <properties>
-    <item.name>@ItemName@</item.name>
-    <bundle.config.export.service>@BundleConfigExportService@</bundle.config.export.service>
-    <bundle.config.bundle.classpath>@BundleConfigBundleClasspath@</bundle.config.bundle.classpath>
-    <talend.job.name>updateCustomer</talend.job.name>
-    <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
-    <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
-    <docker.skip>true</docker.skip>
-    <talend.project.name>LEZIONI_TALEND</talend.project.name>
-    <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
-    <bundle.config.export.package>@BundleConfigExportPackage@</bundle.config.export.package>
-    <talend.project.id>0</talend.project.id>
-    <provided.lib.path>${current.bundle.resources.dir}/provided-lib</provided.lib.path>
-    <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
-    <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
-    <talend.product.version>7.3.1.20200219_1130</talend.product.version>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
-    <talend.routine.groupid>org.example.lezioni_talend.code</talend.routine.groupid>
-    <talend.job.folder>esb_lezioni/lezioni/lezione_esb_1/</talend.job.folder>
-    <bundle.config.import.package>@BundleConfigImportPackage@</bundle.config.import.package>
-    <talend.job.id>_HF5LgMRYEeucwqcLIm395w</talend.job.id>
-    <talend.project.name.lowercase>lezioni_talend</talend.project.name.lowercase>
-    <talend.job.finalName>${talend.job.name}-bundle-${project.version}</talend.job.finalName>
-    <lib.path>${resources.path}/lib</lib.path>
-    <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
+    <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
+    <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
+    <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <talend.job.version>0.1</talend.job.version>
-    <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
+    <talend.project.name.lowercase>lezioni_talend</talend.project.name.lowercase>
     <talend.job.path>lezioni_talend</talend.job.path>
-    <talend.job.context>Default</talend.job.context>
-    <talend.job.stat>true</talend.job.stat>
+    <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
+    <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
+    <talend.project.name>LEZIONI_TALEND</talend.project.name>
+    <talend.product.version>7.3.1.20210521_0803-patch</talend.product.version>
+    <talend.job.finalName>updatecustomer_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.lezioni_talend.pigudf</talend.pigudf.groupid>
-    <talend.job.framework></talend.job.framework>
+    <talend.routine.groupid>org.example.lezioni_talend.code</talend.routine.groupid>
+    <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+    <talend.job.stat>true</talend.job.stat>
+    <talend.job.context>Default</talend.job.context>
+    <talend.job.date>${maven.build.timestamp}</talend.job.date>
+    <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
+    <talend.job.name>updateCustomer</talend.job.name>
+    <talend.job.id>_HF5LgMRYEeucwqcLIm395w</talend.job.id>
+    <talend.project.id>0</talend.project.id>
+    <talend.job.folder>esb_lezioni/lezioni/lezione_esb_1/</talend.job.folder>
+    <talend.job.framework></talend.job.framework>
+    <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <talend.job.type>Standard</talend.job.type>
-    <item.project.name>@ItemProjectName@</item.project.name>
-    <resources.path>${basedir}/src/main/resources</resources.path>
   </properties>
   <dependencies>
     <dependency>
@@ -71,12 +60,12 @@
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>audit-common</artifactId>
-      <version>1.8.0</version>
+      <version>1.16.1</version>
     </dependency>
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>audit-log4j2</artifactId>
-      <version>1.8.0</version>
+      <version>1.16.1</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -89,20 +78,19 @@
       <version>3.8.1</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
+      <groupId>org.talend.daikon</groupId>
       <artifactId>crypto-utils</artifactId>
-      <version>6.0.0-SNAPSHOT</version>
+      <version>0.31.11</version>
     </dependency>
     <dependency>
       <groupId>org.dom4j</groupId>
       <artifactId>dom4j</artifactId>
-      <version>2.1.1</version>
+      <version>2.1.3</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>jakarta.xml.soap-api-1.4</artifactId>
-      <version>6.0.0</version>
-      <type>1</type>
+      <artifactId>jakarta.xml.soap-api</artifactId>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>com.sun.activation</groupId>
@@ -110,9 +98,9 @@
       <version>1.2.0</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
+      <groupId>org.talend.components.lib</groupId>
       <artifactId>job-audit</artifactId>
-      <version>1.1</version>
+      <version>1.4</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -122,7 +110,7 @@
     <dependency>
       <groupId>net.minidev</groupId>
       <artifactId>json-smart</artifactId>
-      <version>2.2.1</version>
+      <version>2.4.2</version>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
@@ -142,7 +130,7 @@
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>logging-event-layout</artifactId>
-      <version>1.8.0</version>
+      <version>1.16.1</version>
     </dependency>
     <dependency>
       <groupId>mysql</groupId>
@@ -160,9 +148,9 @@
       <version>1.7.25</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>talend_file_enhanced_20070724</artifactId>
-      <version>6.0.0</version>
+      <groupId>org.talend.components.lib</groupId>
+      <artifactId>talend_file_enhanced</artifactId>
+      <version>1.1</version>
     </dependency>
     <dependency>
       <groupId>org.example.lezioni_talend.code</groupId>
@@ -171,58 +159,7 @@
     </dependency>
   </dependencies>
   <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <version>2.5.3</version>
-        <extensions>true</extensions>
-        <dependencies>
-          <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-utils</artifactId>
-            <version>3.0.24</version>
-          </dependency>
-        </dependencies>
-        <configuration>
-          <archive>
-            <addMavenDescriptor>false</addMavenDescriptor>
-          </archive>
-          <instructions>
-            <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
-            <Bundle-Name>${talend.job.name}</Bundle-Name>
-            <Bundle-Version>${project.version}</Bundle-Version>
-            <Export-Package>${bundle.config.export.package}</Export-Package>
-            <Export-Service>${bundle.config.export.service}</Export-Service>
-            <Import-Package>${bundle.config.import.package}, *;resolution:=optional</Import-Package>
-            <Bundle-ClassPath>., {maven-dependencies}</Bundle-ClassPath>
-          </instructions>
-          <finalName>${talend.job.finalName}</finalName>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <descriptors>
-                <descriptor>${basedir}/src/main/assemblies/assembly.xml</descriptor>
-              </descriptors>
-              <tarLongFileMode>gnu</tarLongFileMode>
-              <appendAssemblyId>false</appendAssemblyId>
-              <finalName>${talend.job.name}-bundle-${project.version}</finalName>
-              <archive>
-                <manifestFile>${current.bundle.resources.dir}/META-INF/MANIFEST.MF</manifestFile>
-              </archive>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
+    <finalName>${talend.job.finalName}</finalName>
   </build>
   <profiles>
     <profile>
@@ -246,13 +183,53 @@
                   </descriptors>
                   <tarLongFileMode>gnu</tarLongFileMode>
                   <appendAssemblyId>false</appendAssemblyId>
-                  <finalName>${talend.job.name}-bundle-${project.version}</finalName>
-                  <archive>
-                    <manifestFile>${current.bundle.resources.dir}/META-INF/MANIFEST.MF</manifestFile>
-                  </archive>
+                  <finalName>${talend.job.finalName}</finalName>
                 </configuration>
               </execution>
             </executions>
+            <dependencies>
+              <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>1.19</version>
+              </dependency>
+              <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.15</version>
+              </dependency>
+            </dependencies>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>signature</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.talend.ci</groupId>
+            <artifactId>signer-maven-plugin</artifactId>
+            <version>${signer.version}</version>
+            <executions>
+              <execution>
+                <id>sign</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+            <dependencies>
+              <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.15</version>
+              </dependency>
+            </dependencies>
           </plugin>
         </plugins>
       </build>
@@ -283,9 +260,15 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <templates.dir>${basedir}/src/main/templates/</templates.dir>
-        <poms.dir>${basedir}</poms.dir>
         <assemblies.dir>${basedir}/src/main/assemblies/</assemblies.dir>
+        <pigudfpom.dir>${parentpom.dir}code/pigudf/</pigudfpom.dir>
+        <routinescode.dir>${parentpom.dir}code/routines/src/main/</routinescode.dir>
+        <parentpom.dir>${project.parent.relativePath}</parentpom.dir>
+        <templates.dir>${basedir}/src/main/templates/</templates.dir>
+        <routinespom.dir>${parentpom.dir}code/routines/</routinespom.dir>
+        <pigudfcode.dir>${parentpom.dir}code/pigudf/src/main/</pigudfcode.dir>
+        <joblet.dir>${parentpom.dir}jobs/</joblet.dir>
+        <poms.dir>${basedir}</poms.dir>
       </properties>
     </profile>
     <profile>
@@ -397,37 +380,69 @@
     <profile>
       <id>include-microservice-running-configs</id>
       <properties>
-        <microservice.running.configs.dir>${current.resources.dir}/</microservice.running.configs.dir>
+        <microservice.running.configs.dir>${current.int-resources.dir}/</microservice.running.configs.dir>
       </properties>
     </profile>
     <profile>
-      <id>deploy-nexus</id>
+      <id>include-microservice-em-dependencies</id>
       <activation>
         <property>
-          <name>altDeploymentRepository</name>
+          <name>studio.prometheus.metrics</name>
+          <value>true</value>
         </property>
       </activation>
       <build>
         <plugins>
           <plugin>
-            <groupId>org.talend.ci</groupId>
-            <artifactId>osgihelper-maven-plugin</artifactId>
-            <version>7.3.1</version>
+            <artifactId>maven-assembly-plugin</artifactId>
             <executions>
               <execution>
-                <id>osgi-helper</id>
-                <phase>generate-sources</phase>
+                <phase>package</phase>
                 <goals>
-                  <goal>generate</goal>
+                  <goal>single</goal>
                 </goals>
                 <configuration>
-                  <featuresFile>${current.bundle.resources.dir}/feature.xml</featuresFile>
+                  <descriptors>
+                    <descriptor>${basedir}/src/main/assemblies/assembly.xml</descriptor>
+                  </descriptors>
+                  <tarLongFileMode>gnu</tarLongFileMode>
+                  <appendAssemblyId>false</appendAssemblyId>
+                  <finalName>${talend.job.finalName}</finalName>
                 </configuration>
               </execution>
             </executions>
+            <dependencies>
+              <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>1.19</version>
+              </dependency>
+            </dependencies>
           </plugin>
         </plugins>
       </build>
+      <properties>
+        <microservice.configs.dir>${current.resources.dir}/</microservice.configs.dir>
+        <contexts.running.dir>${current.resources.dir}/</contexts.running.dir>
+        <microservice.running.configs.dir>${current.int-resources.dir}/</microservice.running.configs.dir>
+      </properties>
+      <dependencies>
+        <dependency>
+          <groupId>io.micrometer</groupId>
+          <artifactId>micrometer-registry-prometheus</artifactId>
+          <version>1.1.1</version>
+        </dependency>
+        <dependency>
+          <groupId>io.prometheus.jmx</groupId>
+          <artifactId>collector</artifactId>
+          <version>0.13.0</version>
+        </dependency>
+        <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-security</artifactId>
+          <version>2.2.13.RELEASE</version>
+        </dependency>
+      </dependencies>
     </profile>
   </profiles>
 </project>

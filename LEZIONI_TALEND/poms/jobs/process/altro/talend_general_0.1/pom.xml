@@ -23,7 +23,7 @@
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>LEZIONI_TALEND</talend.project.name>
-    <talend.product.version>7.3.1.20200219_1130</talend.product.version>
+    <talend.product.version>7.3.1.20210521_0803-patch</talend.product.version>
     <talend.job.finalName>talend_general_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.lezioni_talend.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.lezioni_talend.code</talend.routine.groupid>
@@ -80,7 +80,7 @@
     <dependency>
       <groupId>org.antlr</groupId>
       <artifactId>antlr4-runtime</artifactId>
-      <version>4.6</version>
+      <version>4.7</version>
     </dependency>
     <dependency>
       <groupId>org.ow2.asm</groupId>
@@ -90,12 +90,12 @@
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>audit-common</artifactId>
-      <version>1.8.0</version>
+      <version>1.16.1</version>
     </dependency>
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>audit-log4j2</artifactId>
-      <version>1.8.0</version>
+      <version>1.16.1</version>
     </dependency>
     <dependency>
       <groupId>com.google.auto</groupId>
@@ -113,14 +113,19 @@
       <version>1.8.1</version>
     </dependency>
     <dependency>
+      <groupId>org.checkerframework</groupId>
+      <artifactId>checker-qual</artifactId>
+      <version>3.5.0</version>
+    </dependency>
+    <dependency>
       <groupId>commons-beanutils</groupId>
       <artifactId>commons-beanutils</artifactId>
-      <version>1.9.3</version>
+      <version>1.9.4</version>
     </dependency>
     <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
-      <version>1.10</version>
+      <version>1.14</version>
     </dependency>
     <dependency>
       <groupId>commons-collections</groupId>
@@ -150,52 +155,57 @@
     <dependency>
       <groupId>org.talend.components</groupId>
       <artifactId>components-api</artifactId>
-      <version>0.28.2</version>
+      <version>0.31.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.components</groupId>
       <artifactId>components-common</artifactId>
-      <version>0.28.2</version>
+      <version>0.31.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.components</groupId>
       <artifactId>components-common-oauth</artifactId>
-      <version>0.28.2</version>
+      <version>0.31.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.components</groupId>
       <artifactId>components-salesforce-definition</artifactId>
-      <version>0.28.2</version>
+      <version>0.31.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.components</groupId>
       <artifactId>components-salesforce-runtime</artifactId>
-      <version>0.28.2</version>
+      <version>0.31.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>crypto-utils</artifactId>
-      <version>0.31.10</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>crypto-utils</artifactId>
-      <version>6.0.0-SNAPSHOT</version>
+      <version>0.31.11</version>
     </dependency>
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>daikon</artifactId>
-      <version>0.31.10</version>
+      <version>0.31.11</version>
     </dependency>
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>daikon-exception</artifactId>
-      <version>0.31.10</version>
+      <version>0.31.11</version>
     </dependency>
     <dependency>
       <groupId>org.dom4j</groupId>
       <artifactId>dom4j</artifactId>
-      <version>2.1.1</version>
+      <version>2.1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.errorprone</groupId>
+      <artifactId>error_prone_annotations</artifactId>
+      <version>2.3.4</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>failureaccess</artifactId>
+      <version>1.0.1</version>
     </dependency>
     <dependency>
       <groupId>com.force.api</groupId>
@@ -210,42 +220,47 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>20.0</version>
+      <version>30.0-jre</version>
     </dependency>
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
-      <version>4.5.5</version>
+      <version>4.5.13</version>
     </dependency>
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpcore</artifactId>
-      <version>4.4.9</version>
+      <version>4.4.13</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.j2objc</groupId>
+      <artifactId>j2objc-annotations</artifactId>
+      <version>1.3</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
-      <version>2.10.1</version>
+      <version>2.11.4</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
-      <version>2.10.1</version>
+      <version>2.11.4</version>
     </dependency>
     <dependency>
       <groupId>org.codehaus.jackson</groupId>
       <artifactId>jackson-core-asl</artifactId>
-      <version>1.9.14-TALEND</version>
+      <version>1.9.15-TALEND</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.10.1</version>
+      <version>2.11.4</version>
     </dependency>
     <dependency>
       <groupId>org.codehaus.jackson</groupId>
       <artifactId>jackson-mapper-asl</artifactId>
-      <version>1.9.14-TALEND</version>
+      <version>1.9.15-TALEND</version>
     </dependency>
     <dependency>
       <groupId>net.sourceforge.javacsv</groupId>
@@ -268,19 +283,19 @@
       <version>6.0.0</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>jersey-client-1.4</artifactId>
-      <version>6.0.0</version>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-client</artifactId>
+      <version>1.13</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>jersey-core-1.4</artifactId>
-      <version>6.0.0</version>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-core</artifactId>
+      <version>1.13</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
+      <groupId>org.talend.components.lib</groupId>
       <artifactId>job-audit</artifactId>
-      <version>1.1</version>
+      <version>1.4</version>
     </dependency>
     <dependency>
       <groupId>joda-time</groupId>
@@ -300,12 +315,22 @@
     <dependency>
       <groupId>net.minidev</groupId>
       <artifactId>json-smart</artifactId>
-      <version>2.2.1</version>
+      <version>2.4.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.code.findbugs</groupId>
+      <artifactId>jsr305</artifactId>
+      <version>1.3.9</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>jxl</artifactId>
       <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>listenablefuture</artifactId>
+      <version>9999.0-empty-to-avoid-conflict-with-guava</version>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
@@ -330,12 +355,12 @@
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>logging-event-layout</artifactId>
-      <version>1.8.0</version>
+      <version>1.16.1</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>mail-1.4</artifactId>
-      <version>6.0.0</version>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+      <version>1.4.7</version>
     </dependency>
     <dependency>
       <groupId>org.apache.maven.resolver</groupId>
@@ -400,7 +425,7 @@
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <version>42.2.9</version>
+      <version>42.2.14</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
@@ -420,7 +445,7 @@
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>talend-codegen-utils</artifactId>
-      <version>0.28.0</version>
+      <version>0.30.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -430,12 +455,12 @@
     <dependency>
       <groupId>org.talend.components.lib</groupId>
       <artifactId>talend-proxy</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.1</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>talend_file_enhanced_20070724</artifactId>
-      <version>6.0.0</version>
+      <groupId>org.talend.components.lib</groupId>
+      <artifactId>talend_file_enhanced</artifactId>
+      <version>1.1</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -482,6 +507,18 @@
                 </configuration>
               </execution>
             </executions>
+            <dependencies>
+              <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>1.19</version>
+              </dependency>
+              <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.15</version>
+              </dependency>
+            </dependencies>
           </plugin>
         </plugins>
       </build>
@@ -506,6 +543,13 @@
                 </goals>
               </execution>
             </executions>
+            <dependencies>
+              <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.15</version>
+              </dependency>
+            </dependencies>
           </plugin>
         </plugins>
       </build>
@@ -658,6 +702,67 @@
       <properties>
         <microservice.running.configs.dir>${current.int-resources.dir}/</microservice.running.configs.dir>
       </properties>
+    </profile>
+    <profile>
+      <id>include-microservice-em-dependencies</id>
+      <activation>
+        <property>
+          <name>studio.prometheus.metrics</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>single</goal>
+                </goals>
+                <configuration>
+                  <descriptors>
+                    <descriptor>${basedir}/src/main/assemblies/assembly.xml</descriptor>
+                  </descriptors>
+                  <tarLongFileMode>gnu</tarLongFileMode>
+                  <appendAssemblyId>false</appendAssemblyId>
+                  <finalName>${talend.job.finalName}</finalName>
+                </configuration>
+              </execution>
+            </executions>
+            <dependencies>
+              <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>1.19</version>
+              </dependency>
+            </dependencies>
+          </plugin>
+        </plugins>
+      </build>
+      <properties>
+        <microservice.configs.dir>${current.resources.dir}/</microservice.configs.dir>
+        <contexts.running.dir>${current.resources.dir}/</contexts.running.dir>
+        <microservice.running.configs.dir>${current.int-resources.dir}/</microservice.running.configs.dir>
+      </properties>
+      <dependencies>
+        <dependency>
+          <groupId>io.micrometer</groupId>
+          <artifactId>micrometer-registry-prometheus</artifactId>
+          <version>1.1.1</version>
+        </dependency>
+        <dependency>
+          <groupId>io.prometheus.jmx</groupId>
+          <artifactId>collector</artifactId>
+          <version>0.13.0</version>
+        </dependency>
+        <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-security</artifactId>
+          <version>2.2.13.RELEASE</version>
+        </dependency>
+      </dependencies>
     </profile>
   </profiles>
 </project>

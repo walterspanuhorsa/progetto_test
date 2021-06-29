@@ -14,6 +14,8 @@
   <name>LEZIONI_TALEND Beans</name>
   <properties>
     <talend.codes.package>beans</talend.codes.package>
+    <maven.compiler.failOnError>${codes.compile.failOnError}</maven.compiler.failOnError>
+    <codes.compile.failOnError>true</codes.compile.failOnError>
   </properties>
   <dependencies>
     <dependency>

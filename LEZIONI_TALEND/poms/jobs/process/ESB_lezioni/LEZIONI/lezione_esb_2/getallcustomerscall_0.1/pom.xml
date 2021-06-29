@@ -28,7 +28,7 @@
     <provided.lib.path>${current.bundle.resources.dir}/provided-lib</provided.lib.path>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
-    <talend.product.version>7.3.1.20200219_1130</talend.product.version>
+    <talend.product.version>7.3.1.20210521_0803-patch</talend.product.version>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
@@ -71,12 +71,12 @@
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>audit-common</artifactId>
-      <version>1.8.0</version>
+      <version>1.16.1</version>
     </dependency>
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>audit-log4j2</artifactId>
-      <version>1.8.0</version>
+      <version>1.16.1</version>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
@@ -84,34 +84,34 @@
       <version>3.8.1</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
+      <groupId>org.talend.daikon</groupId>
       <artifactId>crypto-utils</artifactId>
-      <version>6.0.0-SNAPSHOT</version>
+      <version>0.31.11</version>
     </dependency>
     <dependency>
       <groupId>org.dom4j</groupId>
       <artifactId>dom4j</artifactId>
-      <version>2.1.1</version>
+      <version>2.1.3</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>jersey-client-1.4</artifactId>
-      <version>6.0.0</version>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-client</artifactId>
+      <version>1.13</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>jersey-core-1.4</artifactId>
-      <version>6.0.0</version>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-core</artifactId>
+      <version>1.13</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
+      <groupId>org.talend.components.lib</groupId>
       <artifactId>job-audit</artifactId>
-      <version>1.1</version>
+      <version>1.4</version>
     </dependency>
     <dependency>
       <groupId>net.minidev</groupId>
       <artifactId>json-smart</artifactId>
-      <version>2.2.1</version>
+      <version>2.4.2</version>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
@@ -131,7 +131,7 @@
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>logging-event-layout</artifactId>
-      <version>1.8.0</version>
+      <version>1.16.1</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -144,9 +144,9 @@
       <version>1.7.25</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>talend_file_enhanced_20070724</artifactId>
-      <version>6.0.0</version>
+      <groupId>org.talend.components.lib</groupId>
+      <artifactId>talend_file_enhanced</artifactId>
+      <version>1.1</version>
     </dependency>
     <dependency>
       <groupId>org.example.lezioni_talend.code</groupId>
@@ -166,6 +166,21 @@
             <groupId>org.codehaus.plexus</groupId>
             <artifactId>plexus-utils</artifactId>
             <version>3.0.24</version>
+          </dependency>
+          <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.8.1</version>
+          </dependency>
+          <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.2</version>
+          </dependency>
+          <dependency>
+            <groupId>org.apache.maven.shared</groupId>
+            <artifactId>maven-shared-utils</artifactId>
+            <version>3.3.3</version>
           </dependency>
         </dependencies>
         <configuration>
@@ -205,6 +220,18 @@
             </configuration>
           </execution>
         </executions>
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>1.19</version>
+          </dependency>
+          <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.15</version>
+          </dependency>
+        </dependencies>
       </plugin>
     </plugins>
   </build>
@@ -237,6 +264,18 @@
                 </configuration>
               </execution>
             </executions>
+            <dependencies>
+              <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>1.19</version>
+              </dependency>
+              <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.15</version>
+              </dependency>
+            </dependencies>
           </plugin>
         </plugins>
       </build>
@@ -409,6 +448,13 @@
                 </configuration>
               </execution>
             </executions>
+            <dependencies>
+              <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.15</version>
+              </dependency>
+            </dependencies>
           </plugin>
         </plugins>
       </build>
