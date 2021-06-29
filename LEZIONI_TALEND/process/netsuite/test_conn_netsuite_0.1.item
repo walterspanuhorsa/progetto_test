@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:JNLRwCzc1ADTkZCeZY4a/oOqbE6Ba+kMnT8COXGL"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:6w7xFYurHDfq0zkZ2Wqlx23evVdWqlXNa1dojQY0"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value=""/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:6Nvccxk+Hj0p5eQWLjWA8fxvx4wa5CRXgFlxkiXq"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:qc5CSdEm+CHkZX2PHmEGc5rPuGmuaOtl2hwrQORr"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;log_statcatcher&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;log_logcatcher&quot;"/>
@@ -122,9 +122,9 @@
     <elementParameter field="TEXT" name="configuration.account" value="&quot;4807854&quot;"/>
     <elementParameter field="CLOSED_LIST" name="configuration.loginType" value="TBA"/>
     <elementParameter field="TEXT" name="configuration.consumerKey" value="&quot;737bef3e0e1a44f62b790a2de2eb205aefad3b0797b7b28a8f7480c8cfba7c14&quot;"/>
-    <elementParameter field="PASSWORD" name="configuration.consumerSecret" value="enc:system.encryption.key.v1:jSYxe7dydLh9k2cb1t1dq5hyrSW2THtEavpfLgRMrCS85erkpgHHyVkE5xyt8zJ2GVjwaHRhlZPNPAlHzVxIouDuF36ZWZBTE7suU2RzKCUgxyw4AgxkMCxP+c1YpA=="/>
+    <elementParameter field="PASSWORD" name="configuration.consumerSecret" value="enc:system.encryption.key.v1:KDAK4KilMf17BpQOW0JCO2GdtFFSfwVrKNncEDYP+udyNofwGKKUKyTFiwSY98ErmkkGFaFwTUQO2K07fp2Lx5h4DzleprAv+A3MhihnmvWfVreRRi50Z3btr3AAwA=="/>
     <elementParameter field="TEXT" name="configuration.tokenId" value="&quot;94c36de3f8df84e5d351360eec231c7619d72c7d271e9d82c0937fe9e8100767&quot;"/>
-    <elementParameter field="PASSWORD" name="configuration.tokenSecret" value="enc:system.encryption.key.v1:bDQqF5kkwJ6ebA9VG4cKnMUZweOnehIJe+hgiIGWVykDkHxRn6xBMQ37Ir54K5kUG+6Kh4fSt5yuyV+5uMWmXxVqpzzE0ZrFHDBfU4pXMuMnhdkjfZMACr4Ij/OSUQ=="/>
+    <elementParameter field="PASSWORD" name="configuration.tokenSecret" value="enc:system.encryption.key.v1:wdb9c8c8oFcpZMm5T8coLBthnH1zA93OoFPO6aFrNofqUP4Wg5jHGVoKG8ZRK9wAaZikKHEFekgdW6CMans4Yc9GtAlnidGYnZHQ9/othueHF5A/XK1lFemKqnKt6A=="/>
     <elementParameter field="TECHNICAL" name="configuration.__version" show="false" value="-1"/>
     <metadata connector="FLOW" name="tNetSuiteV2019Connection_1"/>
     <metadata connector="LOOKUP" name="LOOKUP"/>
@@ -152,13 +152,14 @@
   <node componentName="NetSuiteV2019Input" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="192" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tNetSuiteV2019Input_2"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="bmV0c3VpdGUjTmV0U3VpdGUjVjIwMTlJbnB1dA"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" show="false" value="4807854"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.loginType" show="false" value="TBA"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.consumerKey" show="false" value="737bef3e0e1a44f62b790a2de2eb205aefad3b0797b7b28a8f7480c8cfba7c14"/>
-    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.consumerSecret" show="false" value="enc:system.encryption.key.v1:D34DOfQs+RhgEQ5Dyeb9bCTYSoP+YFp9mT2ry1kGXlyrp5IHUCaRzWU7szjz+gROyAy6q6TXVaRNHYMSYksG8Ly/NZiQmIi2nsJLCCDeB2QaccM2/1Nj/6mMmbo5KQ=="/>
+    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.consumerSecret" show="false" value="enc:system.encryption.key.v1:ir6KbZ7Yz5Av5bZ2d5vZkZzCyQJmX7qZY+DBXyELRAg+aEVMmJJE8kTh/wymDosCmA3DK/XCvusDTXkv8YlyEsnf7oV1hp54NtEKn/6RxHdk9ODX2FIEM1KI2KW2AA=="/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.tokenId" show="false" value="94c36de3f8df84e5d351360eec231c7619d72c7d271e9d82c0937fe9e8100767"/>
-    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.tokenSecret" show="false" value="enc:system.encryption.key.v1:jnLJ9OSBRnJ1/4rZSNOwcDn93QHefbg11DvhMM78qatfQ+8un+us1E2f7Ea9IA5EsIt952v4KdrxDkaB+DBBeWXefhbbFnj0wn4XNqwkXzMmylbRajqjLaEEAsHNlA=="/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.recordType" value="Vendor"/>
+    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.tokenSecret" show="false" value="enc:system.encryption.key.v1:mZvayhQaBkBqKZWOTPpjbt2s7Mbt336ndTZPW+6OdM4D66f27g6NfMNELpAAJD/cqh8xZphAg80pNIKVyetDBo0c59aYtNIdrsHdKQrO7FfhUgi4T1O1f+Z3wX28aA=="/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.recordType" value="&quot;Customer&quot;"/>
     <elementParameter field="TABLE" name="configuration.searchCondition">
       <elementValue elementRef="configuration.searchCondition[].field" value=""/>
       <elementValue elementRef="configuration.searchCondition[].operator" value=""/>
@@ -183,7 +184,7 @@
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
     <metadata connector="FLOW" name="tNetSuiteV2019Input_2">
-      <column comment="" key="false" length="0" name="ExternalId" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="0" name="ExternalId" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="InternalId" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="AccountNumber" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="AddressbookList" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -269,6 +270,7 @@
   </node>
   <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/walter.spanu/Dropbox/Il mio PC (VI-BAN-87)/Desktop/out.csv&quot;"/>
@@ -298,7 +300,7 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_2">
-      <column comment="" key="false" length="0" name="ExternalId" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="0" name="ExternalId" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="InternalId" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="AccountNumber" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="AddressbookList" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -393,6 +395,7 @@
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tNetSuiteV2019Input_2" offsetLabelX="0" offsetLabelY="0" source="tNetSuiteV2019Input_2" target="tFileOutputDelimited_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <subjob>
@@ -421,13 +424,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ebe92630-ddb2-47b4-8c4a-e43aedc326e9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BlaryXRPNc1djY23sTihPgIKab3ckmwc883X4UnQNQEAdnBFNiJUSF3WXo4FK+gpE8GdZHLGa6YF&#13;
-7FnzrXMIAg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_18279243-b6ec-4dc7-8677-98669e8d8d30"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZgjcScRFlQZ87AoBPRh+9V8iaJU0HEJNVdlZ2j6cO/IS4Hgd2YmBxHFgSrSryg4bxWMu5/SZyOJt&#13;
-dkQ4Z8ZQ4w==</DigestValue></Reference></SignedInfo><SignatureValue>XGm34iXyvhvWhtW4DBRzExscm5j2CdWfbkx4Drzs27SYOmphKAtr0KYezq7ZEVTkiynD3c314D8O&#13;
-gY72awunw8D096huxO7oHixkoyzrxbwObFSago2Mc41gEY+ln3eKXLWifKS2vMWDcBSzK+5wAre3&#13;
-y7Z6e2Saj0mdv8OhQl06DZPgp+i3jN3QwpudpJ9xuFaml+8ZI+j7+6YNV3Ig7XDDBh2kZKoCq9uO&#13;
-NpeIzFDu7wi1eFlJ/fcbc5RVEaza+6F0AGhhDuOGPOWiGqcvlOXUyg6/2EwNDd8Fd5bMoBRKYtAn&#13;
-w2uEloELddZfZ3Vc94sBQxa/oIgoTy0ZIgKyTA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b23a1a85-2521-46d9-926d-ad6b4b56e75c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rCiChRZ6vS+vGsNL5uupMVdTgIojByRyeMEq89u+MtnC60BCcxbYd8U4ZcqeUyZ6ijPkI0innOU4&#13;
+XkEy4DHRCA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_43471106-5d3f-45b4-8b04-d0d35575fb56"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UtrTXS2efHJMiCev0BxGxn6rrLw1f+OV8umozfzaO38AD0kb67UzJfbo0WKjyU8PbAnoZczQaEj/&#13;
+oQt0DMU3gQ==</DigestValue></Reference></SignedInfo><SignatureValue>XGkrJdnTNxLfKFL0+6pobpVxSJB3HjPdFsX15L+IA3ns4JBIvVfl8914GX9u5L49A/L7L1f3uTeA&#13;
+OArLulXvSZphSth2EktgSmnYnsbWlnAJhsQGhdljOWqYteBJYUtL3s0vfLWMLtpO4+C0nu0i2mem&#13;
+6h8pR9MscmF2Xsj01gUrzZYGfAxT8NDdY1fD0oHZe3dS9Ob8JL93hGZ2NlPPsRuCrTsbfp/CGojd&#13;
+V9Ib3GpdhOdqrs/+YwYWiHqx3nCxhHYNkgGGiWldJQpgcJuGbgfyQ4n3/jw4ItfEJQTMLptNz/6J&#13;
+8TwprcHiY8ORPn9Otqtp3za84GVtYE7axjjo0Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -449,4 +452,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_18279243-b6ec-4dc7-8677-98669e8d8d30" Target="#_ebe92630-ddb2-47b4-8c4a-e43aedc326e9"><Timestamp>2021-06-29 09:56:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_43471106-5d3f-45b4-8b04-d0d35575fb56" Target="#_b23a1a85-2521-46d9-926d-ad6b4b56e75c"><Timestamp>2021-06-29 15:55:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
