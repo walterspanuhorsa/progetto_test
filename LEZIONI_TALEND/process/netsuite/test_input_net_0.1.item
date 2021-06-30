@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:MGA8eZR3FIPvDB2hnn7pls4kibuq75eyGBQxEGlP"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:W5TqpoOXrg059zslHZt98QNiYI2n0HHPFImZttx0"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value=""/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:TRhQpDPhicxyBM0gV7rNmGWFA1jQxyj2z25Bfa6E"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:CK4pwU8jIOOcaevCtCHhzbAP37WM/J4k/7fdgoWp"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;log_statcatcher&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;log_logcatcher&quot;"/>
@@ -113,7 +113,7 @@
     <routinesParameter id="_AnS74IC2EeuT956_ObHmfA" name="TalendStringUtil"/>
     <routinesParameter id="_AnLnIIC2EeuT956_ObHmfA" name="TalendString"/>
   </parameters>
-  <node componentName="tREST" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="96">
+  <node componentName="tREST" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tREST_1"/>
     <elementParameter field="TEXT" name="URL" value="&quot;https://4807854.suitetalk.api.netsuite.com/services/NetSuitePort_2019_2&quot;"/>
     <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
@@ -132,11 +132,33 @@
     <elementParameter field="MEMO" name="BODY" value="&quot;&lt;soapenv:Envelope xmlns:xsd=\&quot;http://www.w3.org/2001/XMLSchema\&quot; xmlns:soapenv=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot; xmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot;&gt;&#13;&#10;    &lt;soapenv:Header&gt;&#13;&#10;        &#13;&#10;&#9;&#9;&lt;passport&gt;&#13;&#10;         &lt;ns1:email xmlns:ns1=\&quot;urn:core_2019_2.platform.webservices.netsuite.com\&quot;&gt;edp@bertonmagazzini.it&lt;/ns1:email&gt;&#13;&#10;         &lt;ns2:password xmlns:ns2=\&quot;urn:core_2019_2.platform.webservices.netsuite.com\&quot;&gt;Nh-9BDBu$K8&lt;/ns2:password&gt;&#13;&#10;         &lt;ns3:account xmlns:ns3=\&quot;urn:core_2019_2.platform.webservices.netsuite.com\&quot;&gt;4807854&lt;/ns3:account&gt;&#13;&#10;         &lt;ns4:role internalId=\&quot;1060\&quot; xmlns:ns4=\&quot;urn:core_2019_2.platform.webservices.netsuite.com\&quot;/&gt;&#13;&#10;      &lt;/passport&gt;&#13;&#10;      &lt;ns6:applicationInfo soapenv:mustUnderstand=\&quot;0\&quot; soapenv:actor=\&quot;http://schemas.xmlsoap.org/soap/actor/next\&quot; xmlns:ns6=\&quot;urn:messages_2019_2.platform.webservices.netsuite.com\&quot;&gt;&#13;&#10;            &lt;ns6:applicationId&gt;FDF13721-9B02-4389-8B3B-21253E52636B&lt;/ns6:applicationId&gt;&#13;&#10;        &lt;/ns6:applicationInfo&gt;&#13;&#10;        &#13;&#10;    &lt;/soapenv:Header&gt;&#13;&#10;    &lt;soapenv:Body&gt;&#13;&#10;        &lt;get xmlns=\&quot;urn:messages_2019_2.platform.webservices.netsuite.com\&quot;&gt;&#13;&#10;     &lt;baseRef internalId=\&quot;5653\&quot; type=\&quot;customer\&quot; xsi:type=\&quot;ns7:RecordRef\&quot; xmlns:ns7=\&quot;urn:core_2019_2.platform.webservices.netsuite.com\&quot;/&gt;&#13;&#10;   &lt;/get&gt;&#13;&#10;    &lt;/soapenv:Body&gt;&#13;&#10;&lt;/soapenv:Envelope&gt;&quot;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tREST_1">
-      <column defaultValue="" key="false" length="0" name="Body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="0" name="Body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="96">
+  <node componentName="tExtractXMLField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tExtractXMLField_1"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="XMLFIELD" value="Body"/>
+    <elementParameter field="CHECK" name="USE_ITEMS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LOOP_QUERY_BASE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/bills/bill/line&quot;"/>
+    <elementParameter field="TABLE" name="MAPPING"/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="USE_XML_FIELD" show="false" value="false"/>
+    <elementParameter field="TEXT" name="XML_TEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="XML_PREFIX" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="CHECK" name="IGNORE_NS" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tExtractXMLField_1"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorXMLField" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="896" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -163,7 +185,7 @@
       <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tLogRow_2">
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tExtractXMLField_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
@@ -172,13 +194,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d0ff79f5-06ac-4245-b44c-75e414266ee7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>owQ0g8SWfmLdZdbsaDO1SAFV8zX1S0N5jMWr42XE2TD8M17YiSuwi3MBLUD/xXNSB8LkrIy2KpzW&#13;
-3GolonFeXA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_65ed7140-6a8a-446d-b20b-39c06b572a90"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vtJZYgJO1PCHu2ntUU1hfcu7x3IOfPuWY6gG/vrB9s4idduwoWLO0PKOn8SVRyQT7fnROVTB/Yxr&#13;
-gj+e04fKnA==</DigestValue></Reference></SignedInfo><SignatureValue>V6OgcIpbwT20sLwEB2BTBKQ6bhLuHWK1oSm54Ec5KBzQgxyXxR2ROmOCqa/J/cnMogiA8GX/S9Bn&#13;
-Nc3i3mgjBYalCxlNgWzZZyuRJTH7m94y/oAShmI2wF1rZORjU7i9afyxJ2OmRp1ONaBcI+QxL2AZ&#13;
-PjHYtSNU6Jmwab89Ck4Gg0UTMH58QYHLQMzw4H6PGmH8qBTFyO80c5JhmHnlCtnRRNwCHImHpuK6&#13;
-WcCNxA7LaYxXD7gyDtz6c6RsXSaJFWtgh1MzlmhA/926BPkx4ao13FZLnTrUP0sNK6cWzrKm7iij&#13;
-dzVMYkdbeR+sCa1v418miyPP5yzbg/+l6U0yiw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7c18eef7-0cf8-4cab-a6f9-d4b5fc28d918"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>P+TKhs55pcuZozUqiRsH/eiXjC4PdUnhIqj46fWzuk3hpQhWpf3hkISDS/psJVTHP4fzgS9UFUxA&#13;
+q45RaG6tRw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f2694584-389a-4356-bfdc-34cabb72b3d5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oILSBrDI6KoEliZiTx6R8dlLZpDSBMgkOJ3HLzRLbi45d1ZIvrPs60Oal5LAhOKTfOTjU8zhlJ+D&#13;
+iAdu+UfFAQ==</DigestValue></Reference></SignedInfo><SignatureValue>SOIJlahVCvlau1ZtZ9n6csI1YTnTWrw1FjOXWT+0/rwlENKkPQiwz7ENncCe71gqnZvQ1l3KJiFI&#13;
+oGgjAwn1wAT1oMKe3pgMNhY2weZsBZAze1fienWB70DXI6UQY6JwMKAHyMcxc957Hvht8WEe3R+G&#13;
+HQFrmTM79h3gnDdVUwZTDhZRsumwotrQnuuUAIVJzGh2uLwGBwmGecGfnHNP4MAnMMOkTeoIqf+m&#13;
+JzI2e9JARF7Wj2bO0V2XfOIMATx7Wf6iMcZSZs0BMAas9Bjye7zEltF8GD9GkmuKq9Tpze86/PZA&#13;
+/0nRdj3KRnlhrkz7RqEQ2a4knrujrOhnLhjc7g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -200,4 +227,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_65ed7140-6a8a-446d-b20b-39c06b572a90" Target="#_d0ff79f5-06ac-4245-b44c-75e414266ee7"><Timestamp>2021-06-29 15:20:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f2694584-389a-4356-bfdc-34cabb72b3d5" Target="#_7c18eef7-0cf8-4cab-a6f9-d4b5fc28d918"><Timestamp>2021-06-30 09:43:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
