@@ -72,11 +72,11 @@
     <module>jobs/routes/ws_lezioni_0.1</module>
   </modules>
   <properties>
-    <signer.version>7.3.1</signer.version>
     <talend.project.name>LEZIONI_TALEND</talend.project.name>
+    <signer.version>7.3.1</signer.version>
     <encoding>UTF-8</encoding>
-    <maven.deploy.skip>true</maven.deploy.skip>
     <talend.docker.tag>${project.version}</talend.docker.tag>
+    <maven.deploy.skip>true</maven.deploy.skip>
     <talend.docker.name>${talend.project.name.lowercase}/${talend.job.folder}%a</talend.docker.name>
   </properties>
   <build>
@@ -281,12 +281,21 @@
                       <artifactId>maven-shared-utils</artifactId>
                       <groupId>org.apache.maven.shared</groupId>
                     </exclusion>
+                    <exclusion>
+                      <artifactId>snakeyaml</artifactId>
+                      <groupId>org.yaml</groupId>
+                    </exclusion>
                   </exclusions>
                 </dependency>
                 <dependency>
                   <groupId>commons-codec</groupId>
                   <artifactId>commons-codec</artifactId>
                   <version>1.15</version>
+                </dependency>
+                <dependency>
+                  <groupId>org.yaml</groupId>
+                  <artifactId>snakeyaml</artifactId>
+                  <version>1.27</version>
                 </dependency>
                 <dependency>
                   <groupId>commons-logging</groupId>

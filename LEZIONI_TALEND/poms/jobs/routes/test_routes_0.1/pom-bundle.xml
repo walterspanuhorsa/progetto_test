@@ -26,7 +26,7 @@
     <provided.lib.path>${current.bundle.resources.dir}/provided-lib</provided.lib.path>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
-    <talend.product.version>7.3.1.20210623_0656-patch</talend.product.version>
+    <talend.product.version>7.3.1.20210723_0711-patch</talend.product.version>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
@@ -100,7 +100,7 @@
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>crypto-utils</artifactId>
-      <version>0.31.11</version>
+      <version>0.31.12</version>
     </dependency>
     <dependency>
       <groupId>org.apache.cxf</groupId>
@@ -238,12 +238,12 @@
       <version>2.11.4</version>
     </dependency>
     <dependency>
-      <groupId>jakarta.xml.bind</groupId>
+      <groupId>org.talend.libraries</groupId>
       <artifactId>jakarta.xml.bind-api</artifactId>
       <version>2.3.2</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
+      <groupId>jakarta.xml.bind</groupId>
       <artifactId>jakarta.xml.bind-api</artifactId>
       <version>2.3.2</version>
     </dependency>
@@ -263,9 +263,9 @@
       <version>1.2.0</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>javax.annotation_1.2.0.v201602091430</artifactId>
-      <version>6.0.0</version>
+      <groupId>javax.annotation</groupId>
+      <artifactId>javax.annotation-api</artifactId>
+      <version>1.3</version>
     </dependency>
     <dependency>
       <groupId>javax.ws.rs</groupId>
@@ -324,42 +324,42 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-aop-5.2.12.RELEASE</artifactId>
+      <artifactId>spring-aop-5.2.15.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-beans-5.2.12.RELEASE</artifactId>
+      <artifactId>spring-beans-5.2.15.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-context-5.2.12.RELEASE</artifactId>
+      <artifactId>spring-context-5.2.15.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-core-5.2.12.RELEASE</artifactId>
+      <artifactId>spring-core-5.2.15.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-expression-5.2.12.RELEASE</artifactId>
+      <artifactId>spring-expression-5.2.15.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-tx-5.2.12.RELEASE</artifactId>
+      <artifactId>spring-tx-5.2.15.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-web-5.2.12.RELEASE</artifactId>
+      <artifactId>spring-web-5.2.15.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-webmvc-5.2.12.RELEASE</artifactId>
+      <artifactId>spring-webmvc-5.2.15.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
