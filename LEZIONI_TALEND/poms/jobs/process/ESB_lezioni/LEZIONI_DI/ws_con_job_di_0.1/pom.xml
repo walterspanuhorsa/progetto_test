@@ -33,7 +33,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.routine.groupid>org.example.lezioni_talend.code</talend.routine.groupid>
-    <talend.job.folder>esb_lezioni/lezioni_microservices/</talend.job.folder>
+    <talend.job.folder>esb_lezioni/lezioni_di/</talend.job.folder>
     <bundle.config.import.package>@BundleConfigImportPackage@</bundle.config.import.package>
     <talend.job.id>_eebqEPN9EeucprB5zhnCNA</talend.job.id>
     <talend.project.name.lowercase>lezioni_talend</talend.project.name.lowercase>
@@ -578,6 +578,11 @@
       <groupId>org.example.lezioni_talend.code</groupId>
       <artifactId>routines</artifactId>
       <version>7.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.lezioni_talend.job</groupId>
+      <artifactId>getAllCustomers_di</artifactId>
+      <version>0.1.0</version>
     </dependency>
   </dependencies>
   <build>
