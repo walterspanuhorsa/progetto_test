@@ -36,7 +36,7 @@
     <talend.job.name>getAllCustomers_di</talend.job.name>
     <talend.job.id>_UpqScPN_Eeuu2bWCq8f5Rg</talend.job.id>
     <talend.project.id>0</talend.project.id>
-    <talend.job.folder>esb_lezioni/lezioni_route/lezione_esb_1/</talend.job.folder>
+    <talend.job.folder>esb_lezioni/lezioni_di/job_figli/</talend.job.folder>
     <talend.job.framework></talend.job.framework>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <talend.job.type>Standard</talend.job.type>
@@ -66,11 +66,6 @@
       <groupId>org.talend.daikon</groupId>
       <artifactId>audit-log4j2</artifactId>
       <version>1.16.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>camel-core-2.24.2</artifactId>
-      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>commons-beanutils</groupId>
@@ -111,16 +106,6 @@
       <groupId>org.talend.libraries</groupId>
       <artifactId>ezmorph-1.0.6</artifactId>
       <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>jakarta.xml.soap-api</artifactId>
-      <version>1.4.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.sun.activation</groupId>
-      <artifactId>javax.activation</artifactId>
-      <version>1.2.0</version>
     </dependency>
     <dependency>
       <groupId>jaxen</groupId>
