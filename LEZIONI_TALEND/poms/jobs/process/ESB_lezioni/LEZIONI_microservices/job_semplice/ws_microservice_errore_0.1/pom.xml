@@ -33,7 +33,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.routine.groupid>org.example.lezioni_talend.code</talend.routine.groupid>
-    <talend.job.folder>esb_lezioni/lezioni_microservices/</talend.job.folder>
+    <talend.job.folder>esb_lezioni/lezioni_microservices/job_semplice/</talend.job.folder>
     <bundle.config.import.package>@BundleConfigImportPackage@</bundle.config.import.package>
     <talend.job.id>_oKYo0PFKEeucprB5zhnCNA</talend.job.id>
     <talend.project.name.lowercase>lezioni_talend</talend.project.name.lowercase>
@@ -47,7 +47,7 @@
     <talend.job.stat>true</talend.job.stat>
     <talend.pigudf.groupid>org.example.lezioni_talend.pigudf</talend.pigudf.groupid>
     <talend.job.framework></talend.job.framework>
-    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8</talend.job.jvmargs>
+    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
     <talend.job.type>Standard</talend.job.type>
     <item.project.name>@ItemProjectName@</item.project.name>
     <resources.path>${basedir}/src/main/resources</resources.path>
@@ -249,12 +249,12 @@
       <version>6.0.0</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
+      <groupId>jakarta.xml.bind</groupId>
       <artifactId>jakarta.xml.bind-api</artifactId>
       <version>2.3.2</version>
     </dependency>
     <dependency>
-      <groupId>jakarta.xml.bind</groupId>
+      <groupId>org.talend.libraries</groupId>
       <artifactId>jakarta.xml.bind-api</artifactId>
       <version>2.3.2</version>
     </dependency>
@@ -274,9 +274,9 @@
       <version>1.2.0</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>javax.annotation_1.2.0.v201602091430</artifactId>
-      <version>6.0.0</version>
+      <groupId>javax.annotation</groupId>
+      <artifactId>javax.annotation-api</artifactId>
+      <version>1.3</version>
     </dependency>
     <dependency>
       <groupId>javax.ws.rs</groupId>
@@ -733,8 +733,8 @@
       </activation>
       <properties>
         <templates.dir>${basedir}/src/main/templates/</templates.dir>
-        <assemblies.dir>${basedir}/src/main/assemblies/</assemblies.dir>
         <poms.dir>${basedir}</poms.dir>
+        <assemblies.dir>${basedir}/src/main/assemblies/</assemblies.dir>
       </properties>
     </profile>
     <profile>
@@ -754,8 +754,8 @@
       <properties>
         <talend.pigudf.excludes.set>org.talend.pigudf.${talend.project.name.lowercase}:*</talend.pigudf.excludes.set>
         <talend.libraries.excludes.set>${talend.libraries.includes.set}</talend.libraries.excludes.set>
-        <talend.jobs.excludes.set>${project.groupId}:*</talend.jobs.excludes.set>
         <talend.code.excludes.set>org.talend.code.${talend.project.name.lowercase}:*</talend.code.excludes.set>
+        <talend.jobs.excludes.set>${project.groupId}:*</talend.jobs.excludes.set>
         <talend.libraries.includes.set>org.talend.libraries:*</talend.libraries.includes.set>
         <current.job.binaries.include>${project.groupId}:${project.artifactId}:${project.version}</current.job.binaries.include>
       </properties>
