@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:IgKkeuQwY8Vesvf7cmo9ap7l1Ui6ENhJDjvjwYC8"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:aCwA3+Z/ZbzSaj6ib63wXhkjcKoW/gyx83/bT5nL"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value=""/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:9N/8BoHfMylAv0oR4Va1GpHvac/bfnpXWvVuhASA"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:1EhiVq2X29/YB5x0DXEX3kMEOfqH0ho3J2WJC1vA"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;log_statcatcher&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;log_logcatcher&quot;"/>
@@ -120,15 +120,15 @@
     <elementParameter field="TEXT" name="API_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="REST_ENDPOINT" value="&quot;http://localhost:8089&quot;"/>
     <elementParameter field="TABLE" name="SCHEMAS">
-      <elementValue elementRef="SCHEMA" value="online"/>
+      <elementValue elementRef="SCHEMA" value="getAllCustomers"/>
       <elementValue elementRef="HTTP_VERB" value="GET"/>
-      <elementValue elementRef="URI_PATTERN" value="&quot;/online/{id}&quot;"/>
+      <elementValue elementRef="URI_PATTERN" value="&quot;/getAllCustomers&quot;"/>
       <elementValue elementRef="CONSUMES" value="NONE"/>
       <elementValue elementRef="PRODUCES" value="XML-JSON"/>
       <elementValue elementRef="STREAMING" value="false"/>
-      <elementValue elementRef="SCHEMA" value="ready"/>
+      <elementValue elementRef="SCHEMA" value="getCustomerById"/>
       <elementValue elementRef="HTTP_VERB" value="GET"/>
-      <elementValue elementRef="URI_PATTERN" value="&quot;/ready&quot;"/>
+      <elementValue elementRef="URI_PATTERN" value="&quot;/getCustomerById/{id}&quot;"/>
       <elementValue elementRef="CONSUMES" value="NONE"/>
       <elementValue elementRef="PRODUCES" value="XML-JSON"/>
       <elementValue elementRef="STREAMING" value="false"/>
@@ -155,10 +155,10 @@
       <column defaultValue="" key="false" length="0" name="status" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="1024" name="error" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <metadata connector="FLOW" name="online">
-      <column key="false" length="0" name="id" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" name="getAllCustomers">
+      <column key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <metadata connector="FLOW" name="ready">
+    <metadata connector="FLOW" name="getCustomerById">
       <column key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -249,13 +249,13 @@
       <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="online" lineStyle="0" metaname="online" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRESTRequest_1" target="tRunJob_1">
+  <connection connectorName="FLOW" label="getAllCustomers" lineStyle="0" metaname="getAllCustomers" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRESTRequest_1" target="tRunJob_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="online"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="getAllCustomers"/>
   </connection>
-  <connection connectorName="FLOW" label="ready" lineStyle="0" metaname="ready" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tRESTRequest_1" target="tRunJob_2">
+  <connection connectorName="FLOW" label="getCustomerById" lineStyle="0" metaname="getCustomerById" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tRESTRequest_1" target="tRunJob_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ready"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="getCustomerById"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tRESTResponse_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -270,13 +270,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4756d152-cb44-49de-a0da-1f133823c8ae"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XhDCOoh2uCs7i5KKdahlCSTjMPjHb1XIjecqSjH4BgwYWxQTNZFKK9KbjVOzeOb+O7zYOszmPyTP&#13;
-wpRJYFbuGw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fdd39ab5-13c6-40a7-82b2-12d5643600fc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3qiyASFXrm/T72LLvsPy6h1VhowbHMyNIZ9Uhes9vFi6sJVvkUrjcB/DcZAw7JmlfV4w8yciNn/J&#13;
-HAZs7nsb7Q==</DigestValue></Reference></SignedInfo><SignatureValue>njQDB/YbW4iqm/VITEv8KjdmjPwUtqTwPjmWKoOYnq6XfORyNl3YFer3dfsiLSgIytopfW3qyzlf&#13;
-gcI8PsV40OJ9sQkVSaF70uy3MjX2f2amyWQttoqPJLZ8asYYj/hDs0/RlGpVQs+3A6AGL2/1Stcq&#13;
-hSMaGZyQkx9dmKCY2IHPKrsLPWZliE16yBW4H8ABEEEk6GKZ5Cf9eyMQmizZkJoU80Ggh5nlYeut&#13;
-Al2af24xr+hrh119irinHnwmmtSdI/LgvBr3ddckxhdlpO6SHB3hGnvTRphI5/EgSUWENXmwPeJu&#13;
-cMFl92hOg7iQDlSPub8PegQSLGbqz5MDdg6yOA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1fbfe8f9-ea43-4cb3-a109-d102f963f366"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rWvbgJ3pDnavsYazVM9ksFJcYJKYqba7dAr6zzCvCIydXUA/9N7QTrv8eXW2Jwq1at5h3twsjQi1&#13;
+cmWn3BwLWA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_85dee8df-a1da-4353-8329-136632894539"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>G4m7AyhireG3hNGj+HF7je13gZmjlifT1Gz6feEJBEz+GgPCJYMG0/6TmuYq/wcxzKVbQ0RlwYOv&#13;
+caFYbtLw7w==</DigestValue></Reference></SignedInfo><SignatureValue>G9SofvgKnMQzX1jdVSkXW54sXyZR2ECOroQXZVn/5BXGLAMmrt/ZTwozp8ZLcS3CjNR3oTP2Zydo&#13;
+8zlfYky8bdqS7hZuHG4tUJt3YfJirWyMhqbYQtZlQlz7+A+85tJuU37k8yo00SCzBlKdbf8sxX2w&#13;
+8I0d73c8JVHJC1XG+M5KD0EOKX84Wt/bS7npgRGXK4YQ4kDbngCAgnuGXBJcjEMg1V1M2taxNgwG&#13;
+7axXOqcU/0yZwfz+WvoEGgJ/N9Wk2C9Q2BHWdrkrAOQHNcr7uJOq4JCkZ4rjbe+dELMD4op3+Z08&#13;
+AIgLYUyxeoLxYvShoqtKCR4uK5G6vgviNLRhGg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -298,4 +298,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fdd39ab5-13c6-40a7-82b2-12d5643600fc" Target="#_4756d152-cb44-49de-a0da-1f133823c8ae"><Timestamp>2021-08-02 13:49:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_85dee8df-a1da-4353-8329-136632894539" Target="#_1fbfe8f9-ea43-4cb3-a109-d102f963f366"><Timestamp>2021-08-02 13:52:18</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
