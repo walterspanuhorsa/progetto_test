@@ -6,18 +6,18 @@
     <groupId>org.example.lezioni_talend</groupId>
     <artifactId>code.Master</artifactId>
     <version>7.3.1</version>
-    <relativePath>../../../../../</relativePath>
+    <relativePath>../../../../../../</relativePath>
   </parent>
   <groupId>org.example.lezioni_talend.service</groupId>
-  <artifactId>ws_microservice_errore</artifactId>
+  <artifactId>ws_microservice</artifactId>
   <version>0.1.0</version>
   <packaging>bundle</packaging>
-  <name>LEZIONI_TALEND ws_microservice_errore-${project.version} (0.1,Job Designs) Bundle</name>
+  <name>LEZIONI_TALEND ws_microservice-${project.version} (0.1,Job Designs) Bundle</name>
   <properties>
     <item.name>@ItemName@</item.name>
     <bundle.config.export.service>@BundleConfigExportService@</bundle.config.export.service>
     <bundle.config.bundle.classpath>@BundleConfigBundleClasspath@</bundle.config.bundle.classpath>
-    <talend.job.name>ws_microservice_errore</talend.job.name>
+    <talend.job.name>ws_microservice</talend.job.name>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
     <docker.skip>true</docker.skip>
@@ -35,7 +35,7 @@
     <talend.routine.groupid>org.example.lezioni_talend.code</talend.routine.groupid>
     <talend.job.folder>esb_lezioni/lezioni_microservices/</talend.job.folder>
     <bundle.config.import.package>@BundleConfigImportPackage@</bundle.config.import.package>
-    <talend.job.id>_oKYo0PFKEeucprB5zhnCNA</talend.job.id>
+    <talend.job.id>_u7fGAPFGEeuZXYzD-FUiBg</talend.job.id>
     <talend.project.name.lowercase>lezioni_talend</talend.project.name.lowercase>
     <talend.job.finalName>${talend.job.name}-bundle-${project.version}</talend.job.finalName>
     <lib.path>${resources.path}/lib</lib.path>
@@ -47,7 +47,7 @@
     <talend.job.stat>true</talend.job.stat>
     <talend.pigudf.groupid>org.example.lezioni_talend.pigudf</talend.pigudf.groupid>
     <talend.job.framework></talend.job.framework>
-    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8</talend.job.jvmargs>
     <talend.job.type>Standard</talend.job.type>
     <item.project.name>@ItemProjectName@</item.project.name>
     <resources.path>${basedir}/src/main/resources</resources.path>
@@ -249,12 +249,12 @@
       <version>6.0.0</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
+      <groupId>jakarta.xml.bind</groupId>
       <artifactId>jakarta.xml.bind-api</artifactId>
       <version>2.3.2</version>
     </dependency>
     <dependency>
-      <groupId>jakarta.xml.bind</groupId>
+      <groupId>org.talend.libraries</groupId>
       <artifactId>jakarta.xml.bind-api</artifactId>
       <version>2.3.2</version>
     </dependency>
@@ -579,6 +579,11 @@
       <artifactId>routines</artifactId>
       <version>7.3.1</version>
     </dependency>
+    <dependency>
+      <groupId>org.example.lezioni_talend.job</groupId>
+      <artifactId>online</artifactId>
+      <version>0.1.0</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -733,8 +738,8 @@
       </activation>
       <properties>
         <templates.dir>${basedir}/src/main/templates/</templates.dir>
-        <poms.dir>${basedir}</poms.dir>
         <assemblies.dir>${basedir}/src/main/assemblies/</assemblies.dir>
+        <poms.dir>${basedir}</poms.dir>
       </properties>
     </profile>
     <profile>
@@ -754,8 +759,8 @@
       <properties>
         <talend.pigudf.excludes.set>org.talend.pigudf.${talend.project.name.lowercase}:*</talend.pigudf.excludes.set>
         <talend.libraries.excludes.set>${talend.libraries.includes.set}</talend.libraries.excludes.set>
-        <talend.code.excludes.set>org.talend.code.${talend.project.name.lowercase}:*</talend.code.excludes.set>
         <talend.jobs.excludes.set>${project.groupId}:*</talend.jobs.excludes.set>
+        <talend.code.excludes.set>org.talend.code.${talend.project.name.lowercase}:*</talend.code.excludes.set>
         <talend.libraries.includes.set>org.talend.libraries:*</talend.libraries.includes.set>
         <current.job.binaries.include>${project.groupId}:${project.artifactId}:${project.version}</current.job.binaries.include>
       </properties>
